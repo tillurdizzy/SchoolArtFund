@@ -1,0 +1,8 @@
+<div ng-controller="ArtworksCtrl as Ctrl">
+    <h4>{{Ctrl.headerTxt}}</h4>
+    <div class="lostPaintings">
+        <gallery-item class="lostPaintingsDiv" artist="{{e.artistName}}" id="{{e.PRIMARY_ID}}" thumbsrc="{{e.thumbsrc}}" title="{{e.title}}" 
+        showdetails="Ctrl.ctrlShowDetails(e.PRIMARY_ID)" 
+        ng-repeat="e in Ctrl.myData"></gallery-item>
+    </div>
+</div>

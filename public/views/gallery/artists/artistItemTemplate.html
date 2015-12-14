@@ -1,0 +1,14 @@
+<div class="artistGridItem">
+  <div ng-class="getHover()">
+    <h2>{{vm.artist}}</h2>
+  </div>
+  <div class="lower-half">
+    <div class="imgContainer">  
+      <img ng-src="{{vm.imgsrc}}" alt="{{vm.artist}}">
+    </div>
+    <div class="bio">
+      <p>{{vm.bio}}</p>
+      <p><a ng-click="vm.seeArtwork()">See artwork.</a></p>
+    </div>
+  </div>
+</div>

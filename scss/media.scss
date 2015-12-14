@@ -1,0 +1,118 @@
+// max-width ----- "If [screen width] is less than or equal to [specified #], then do {...}"
+
+// min-width means "If [screen width] is greater than or equal to [specified #], then do {...}" 
+
+@media all and ( max-height: 700px ) {
+	.footer{
+		display:none;
+	}
+}
+
+@media all and ( max-width: 1350px ) {
+	.inner-container{
+		margin-left:15%;
+		margin-right:15%;
+	}
+}
+
+@media all and ( max-width: 950px ) {
+	.inner-container{
+		margin-left:10%;
+		margin-right:10%;
+	}
+	.header-menu-top{
+		justify-content:flex-start;
+	}
+	.header-menu-bottom{
+		display:none;
+	}
+}
+
+@media all and ( max-width: 850px ) {
+	.inner-container{
+		margin-left:5%;
+		margin-right:5%;
+	}
+}
+
+
+@media all and ( max-width: 768px ) {
+	.inner-container{
+		margin-left:2%;
+		margin-right:2%;
+	}
+}
+
+@media all and ( max-width: 700px ) {
+	.inner-container{
+		margin-left:2%;
+		margin-right:2%;
+	}
+
+	.home-page{
+		width:100%;
+		min-height:700px;
+		padding: 15px;
+		display:flex;
+		flex-direction: column;
+		.main-left{
+			width:100%;
+			img{
+				min-width:100%;
+			}
+		}
+
+		.main-right{
+			padding-left:10px;
+			width:100%;
+		}
+
+	}
+}
+
+@media all and ( max-width: 320px ) {
+	
+}
+
+ /* PHONE LANDSCAPE VERSION */
+@media only screen and (max-width: 320px) and (orientation : landscape) {
+   
+}
+
+.videogular-container {
+	width: 720px;
+	height: 404px;
+	float:left;
+	overflow: hidden;
+	margin-bottom:30px;
+}
+
+.video-thumbs{
+	height: 404px;
+	float:left;
+	margin-left:10px;
+	img{
+		cursor: hand;
+	}
+}
+ 
+@media (min-width: 1200px) {
+  .videogular-container {
+    width: 640px;
+    height: 360px;
+  }
+}
+ 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .videogular-container {
+    width: 480px;
+    height: 270px;
+  }
+}
+ 
+@media (min-width: 768px) and (max-width: 991px) {
+  .videogular-container {
+    width: 320px;
+    height: 180px;
+  }
+}

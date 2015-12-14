@@ -1,0 +1,27 @@
+<div class="artworkModal">
+	<h5>Artist: {{details.artistName}}  -  Title: {{details.title}}</h5>
+	<div class="artworkDetails">
+  		<div>
+  			Click size to select for purchase:
+  		</div>
+  		<div>
+        <button type="button" ng-click="doPurchase('5x7')">5x7 - {{details.price_5x7}}</button>
+  		</div>
+  		<div>
+       <button type="button" ng-click="doPurchase('8x10')">8x10 - {{details.price_8x10}}</button>
+  		</div>
+  		<div>
+       <button type="button" ng-click="doPurchase('11x14')">11x14 - {{details.price_11x14}}</button>
+  			
+  		</div>
+  		<div>
+       <button type="button" ng-click="doPurchase('16x20')">16x20 - {{details.price_16x20}}</button>
+  		</div>
+  	</div>
+
+	<div class="imgContainer">  
+		<img ng-src="{{imgpath}}" alt="{{details.title}}">
+	</div>
+  	
+   <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
+</div>

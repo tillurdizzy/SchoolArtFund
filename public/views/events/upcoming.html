@@ -1,0 +1,8 @@
+<div  class="inner-container" ng-controller="EventsCtrl as Ctrl">
+   <h3>Upcoming Events</h3>
+   <div class="hrule"></div>
+    <div class="upcoming-events">
+        <upcoming-item class="upcoming-events-div" dates="{{e.dates}}" venue="{{e.venue}}" imgsrc="{{e.imgsrc}}" title="{{e.title}}"
+        ng-repeat="e in Ctrl.upcoming"></gallery-item>
+    </div>
+</div>

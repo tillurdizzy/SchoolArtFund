@@ -1,0 +1,189 @@
+
+.lostArtists{
+	width:100%;
+	lost-utility: clearfix;
+}
+
+.lostArtistsDiv{
+	lost-column: 1/1;
+}
+
+.lostPaintings{
+	width:100%;
+	lost-utility: clearfix;
+}
+
+.lostPaintingsDiv{
+	lost-column: 1/1;
+}
+
+@media screen and (min-width: 570px){
+	.lostPaintingsDiv{
+		lost-column: 1/2;
+	}
+}
+
+@media screen and (min-width: 770px){
+	.lostArtistsDiv{
+		lost-column: 1/2;
+	}
+	.lostPaintingsDiv{
+		lost-column: 1/3;
+	}
+}
+
+@media screen and (min-width: 1200px){
+	.lostArtistsDiv{
+		lost-column: 1/3;
+	}
+	.lostPaintingsDiv{
+		lost-column: 1/4;
+	}
+}
+
+.artistGridItem{
+	background-color:$primary02-color;	
+	padding:10px;
+	height:200px;
+	min-width:300px !important;
+	cursor: hand;
+	margin-bottom:20px;
+
+	.lower-half{
+		display: flex;
+		flex-wrap: nowrap;
+	}
+		
+	p{
+		margin:0 4px;
+		font-size: responsive .6em .8em;
+		font-range: 380px 480px;
+	}
+
+	.imgContainer{
+		cursor: hand;
+		width: 125px !important;
+		height:125px !important;
+		flex-shrink: 0;
+		flex-basis:125px;
+	}
+
+	.bio{
+		flex-grow:3;
+	}
+		
+	.titleArea{
+		cursor: hand;
+		background-color:$top-bar-up;
+		height:35px;
+		width:100%;
+		margin-bottom: 10px;
+		h2{
+			line-height: 35px;
+			text-align: center;
+			color:$top-bar-label;
+			font-size: responsive 1em 1.2em;
+			font-range: 480px 700px;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 600;
+		}
+	}
+
+	.titleAreaHover{
+		background-color:$accent01-color;
+		height:35px;
+		width:100%;
+		margin-bottom: 10px;
+		h2{
+			line-height: 35px;
+			text-align: center;
+			color:$top-bar-label;
+			font-size: responsive 1em 1.2em;
+			font-range: 480px 700px;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 600;
+		}
+	}
+}
+
+.galleryGridItem{
+	background-color:$primary02-color;	
+	padding:10px;
+	cursor: hand;
+	margin-bottom:20px;
+	
+		
+	p{
+		margin:0 4px;
+		font-size: .9em;
+	}
+
+	.imgContainer{
+		display: flex;
+		justify-content: center;
+		width:100%;
+		margin-bottom: 5px;
+		img{
+			flex-basis:200px;	
+		}
+	}
+
+	.gallery-details{
+
+	}
+		
+	.titleArea{
+		background-color:$top-bar-up;
+		height:35px;
+		width:100%;
+		margin-bottom: 10px;
+	}
+
+	.titleAreaHover{
+		background-color:$accent01-color;
+		height:35px;
+		width:100%;
+		margin-bottom: 10px;
+	}
+}
+
+.sortByContainer{
+	height:40px;
+	width:100%;
+	input[type="radio"]{
+		display:inline-block;
+		margin-left:15px;
+	}
+	select{
+		display:inline-block;
+		margin-left:15px;
+		width:20%;
+	}
+	label{
+		display:inline-block;
+		font-size: .9em;
+		font-weight: 600;
+		font-family: 'Open Sans', sans-serif;
+		vertical-align: middle;
+	}
+	h6{
+		display:inline-block;
+		font-size: 1em;
+	}
+}
+
+.artworkModal{
+	.imgContainer{
+		width:100%;
+		display:flex;
+		justify-content: center;
+	}
+}
+
+.artworkDetails{
+	div{
+		display:inline-block;
+		margin-right: 20px;
+		margin-bottom: 10px;
+	}
+}

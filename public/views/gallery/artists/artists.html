@@ -1,0 +1,13 @@
+<div ng-controller="ArtistCtrl as Ctrl">
+    <div class="sortByContainer">
+    	<H6>Filter Artists by: </H6>
+    	<input type="radio" value="All" data-ng-model="Ctrl.currentFilter" ng-change="Ctrl.applyFilter()" checked><label>All</label>
+    	<input type="radio" value="Pro" data-ng-model="Ctrl.currentFilter" ng-change="Ctrl.applyFilter()"><label>Professionals</label>
+        <input type="radio" value="Amateur" data-ng-model="Ctrl.currentFilter" ng-change="Ctrl.applyFilter()"><label>Amateurs</label>
+    	<input type="radio" value="Student" data-ng-model="Ctrl.currentFilter" ng-change="Ctrl.applyFilter()"><label for="rad2">Students</label>
+    </div>
+    <div class="lostArtists">
+        <artist-item class="lostArtistsDiv" artist="{{e.artist}}" imgsrc="{{e.photo}}" bio="{{e.bio}}"
+        ng-click="Ctrl1.showArtistPage(e.artist)" ng-repeat="e in Ctrl.myData"></artist-item>
+    </div>
+</div>

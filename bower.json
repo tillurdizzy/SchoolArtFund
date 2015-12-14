@@ -1,0 +1,21 @@
+{
+  "name": "EvoBid",
+  "version": "0.0.0",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.4.3",
+    "angular-sanitize": "~1.4.3",
+    "jquery": "~2.1.4",
+    "angular-ui-router": "~0.2.15",
+    "videogular": "~1.2.5",
+    "modernizr": "~2.8.3",
+    "underscore": "~1.8.3"
+  }
+}

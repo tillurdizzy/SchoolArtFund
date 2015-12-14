@@ -1,0 +1,29 @@
+
+<div class="inner-container">
+	<div class="data-entry" ng-controller="DataCtrl as Ctrl">
+		<h3>Artwork Lookup</h3>
+	    <h4>Enter Product Code:</h4>
+	    <div class="tiny-column">
+	    	<input type="tel" ng-model="Ctrl.codeInput">
+	    	<button type="button" ng-click="Ctrl.doLookup()">Submit</button>
+	    	<p>
+	    		{{Ctrl.result}}
+	    	</p>
+	    </div>
+
+	    <table st-table="Ctrl.artworkDetails" class="table table-striped">
+		<thead>
+			<tr>
+				<th>Item</th>
+				<th>Detail</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="row in Ctrl.artworkDetails">
+				<td>{{row.item}}</td>
+				<td>{{row.detail}}</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+</div>

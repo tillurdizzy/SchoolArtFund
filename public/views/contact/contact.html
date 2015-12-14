@@ -1,0 +1,55 @@
+<div  class="inner-container" ng-controller="ContactCtrl">
+    <h3>Contact Us</h3>
+    <div class="hrule"></div>
+    <div class="flexCenterColumn">
+        <h1 class="textAlignCenter">281-498-ARTS (2787)</h1>
+        <h4 class="textAlignCenter">Sign up for the SAF monthly newsletter!</h4>
+    </div>
+    
+	<div class="submitForm">
+    <form name="requestForm" ng-submit="submitRequestForm()" novalidate>
+                    <div class="col1">
+                        <label>First Name</label>
+                        <input ng-class="{error:requestForm.firstname.$invalid&&submissionInvalid}" name="firstname" type="text" placeholder="First Name" ng-model="_firstname" required>
+                       
+                        <label>Email</label>
+                        <input  ng-class="{error:requestForm.email.$invalid&&submissionInvalid}" name="email" type="text" placeholder="Email" ng-model="_email" required>
+                       
+                        <label>State</label>
+                        <input ng-class="{error:requestForm.state.$invalid&&submissionInvalid}" name="state" type="text" placeholder="State" ng-model="_state" required>
+                        
+                        <div class="clearfix" ng-show="requestForm.firstname.$invalid && submissionInvalid">
+                            <p class="attention" ng-show="requestForm.firstname.$error.required">First Name is required.</p>
+                        </div>
+                        <div ng-show="requestForm.email.$invalid && submissionInvalid">
+                            <p class="attention" ng-show="requestForm.email.$error.required">Email is required.</p>
+                        </div>
+                        <div ng-show="requestForm.state.$invalid && submissionInvalid">
+                            <p class="attention" ng-show="requestForm.state.$error.required">State is required.</p>
+                        </div>
+                        <div ng-show="requestForm.lastname.$invalid && submissionInvalid">
+                            <p class="attention" ng-show="requestForm.lastname.$error.required">Last Name is required.</p>
+                        </div>
+                         <div ng-show="requestForm.phone.$invalid && submissionInvalid">
+                            <p class="attention" ng-show="requestForm.phone.$error.required">Phone Number is required.</p>
+                        </div>
+                         <div ng-show="requestForm.zip.$invalid && submissionInvalid">
+                            <p class="attention" ng-show="requestForm.zip.$error.required">Zip Code is required.</p>
+                        </div>
+
+                        <button type="submit" class="button small radius">Submit</button>
+                  </div>
+
+                  <div class="col2">
+                        <label>Last Name</label>
+                        <input ng-class="{error:requestForm.lastname.$invalid&&submissionInvalid}" name="lastname" type="text" placeholder="Last Name" ng-model="_lastname" required>
+                        
+                        <label>Phone Number</label>
+                        <input ng-class="{error:requestForm.phone.$invalid&&submissionInvalid}" name="phoneNum" type="text" placeholder="Phone Number" ng-model="_phone" required>
+
+                        <label>Zip</label>
+                        <input ng-class="{error:requestForm.zip.$invalid&&submissionInvalid}" name="zip" type="text" placeholder="Zip Code" ng-model="_zip" required>
+                    </div> 
+                </form>
+               </div>
+</div>

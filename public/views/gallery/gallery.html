@@ -1,0 +1,26 @@
+<div class="inner-container"  ng-controller="GalleryCtrl as Ctrl1">
+	<h3>Gallery</h3>
+    <div class="hrule"></div>
+
+    <!-- Default view Lists each Artist OR lists each piece of Artwork -->
+    <div class="sortByContainer" ng-show="Ctrl1.currentView=='default'">
+    	<H6>Show: </H6>
+    	<input id="rad01" type="radio" value="artist" data-ng-model="Ctrl1.defaultViewSort" 
+    	ng-change="Ctrl1.changeSort()" checked><label for="rad1">Artists</label>
+
+    	<input id="rad02" type="radio" value="artworks" data-ng-model="Ctrl1.defaultViewSort" 
+    	ng-change="Ctrl1.changeSort()"><label for="rad2">Artworks</label>
+    </div>
+
+     <!-- byArtist view shows after clicking the "See Artwork" on Artist's Listing-->
+    <div class="sortByContainer" ng-show="Ctrl1.currentView=='byArtist'">
+    	<H6>Select Artist: </H6>
+    	<select ng-model="Ctrl1.selectedArtist" ng-options="c.artist for c in Ctrl1.artistList" 
+    	ng-change="Ctrl1.selectArtist()"></select>
+    </div>
+
+    <div class="hrule"></div>
+
+
+    <div ui-view></div>
+</div>

@@ -1,0 +1,20 @@
+.home-page{
+	width:100%;
+	min-height:700px;
+	padding: 15px;
+	display:flex;
+
+	.main-left{
+		width:100%;
+		img{
+			min-width:100%;
+		}
+	}
+
+	.main-right{
+		padding-left:10px;
+		width:100%;
+	}
+
+}
+

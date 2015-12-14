@@ -1,0 +1,8 @@
+<div ng-controller="EventsCtrl as Ctrl">
+   <h3>Recent Events</h3>
+   <div class="hrule"></div>
+    <div class="recent-events">
+        <recent-item class="recent-events-div" dates="{{e.dates}}" venue="{{e.venue}}" imgsrc="{{e.imgsrc}}" title="{{e.title}}"
+        ng-repeat="e in Ctrl.recent"></gallery-item>
+    </div>
+</div>

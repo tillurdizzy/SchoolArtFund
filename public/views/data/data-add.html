@@ -1,0 +1,48 @@
+<div class="data-entry" ng-controller="DataCtrl as Ctrl">
+    <div class="majorPageHeading">Add Data</div>
+    <div class="hrule"></div>
+    <div>
+    	<h4>Add Artist</h4>
+		<div class="hrule"></div>
+		<form class="short-form" name="Ctrl.FormA" data-ng-submit="Ctrl.submitArtist()" novalidate >
+			<label>First Name<input name="A1" data-ng-class="{error:Ctrl.FormA.A1.$invalid&&invalid}" 
+			type="text" ng-model="Ctrl.artist.name_first" required></input></label>
+			<label>Last Name<input name="A2" data-ng-class="{error:Ctrl.FormA.A2.$invalid&&invalid}" 
+			type="text" ng-model="Ctrl.artist.name_last" required></label>
+			<label>Photo<input name="A3" data-ng-class="{error:Ctrl.FormA.A3.$invalid&&invalid}" 
+			type="text" ng-model="Ctrl.artist.photo" required></label>
+			<label>Bio<input name="A4" data-ng-class="{error:Ctrl.FormA.A4.$invalid&&invalid}" 
+			type="text" ng-model="Ctrl.artist.bio" required></label>
+			<button type="submit" class="button small radius">Submit</button>
+		</form>
+	</div>
+	<div class="hrule"></div>
+    <div>
+    	<h4>Add Artwork</h4>
+    	<div class="hrule"></div>
+		<form class="short-form" name="Ctrl.FormB" ng-submit="Ctrl.submitArtwork()" novalidate >
+			<label>Artist<select name="B1" ng-model="Ctrl.artwork.artist" ng-options="c.label for c in Ctrl.artistList" required></select></label>
+			<label>Title<input name="B2" ng-model="Ctrl.artwork.title" ng-class="{error:Ctrl.FormB.B2.$invalid&&invalid}" type="text" required></label>
+			<label>Medium<input name="B3" ng-model="Ctrl.artwork.medium" ng-class="{error:Ctrl.FormB.B3.$invalid&&invalid}" type="text" required></label>
+			<label>Date<input name="B4" ng-model="Ctrl.artwork.date" ng-class="{error:Ctrl.FormB.B4.$invalid&&invalid}" type="text" required></label>
+			<label>Thumb Image<input name="B5" ng-model="Ctrl.artwork.thumbsrc" ng-class="{error:Ctrl.FormB.B5.$invalid&&invalid}" type="text" required></label>
+			<label>Full Image<input name="B6" ng-model="Ctrl.artwork.fullsrc" ng-class="{error:Ctrl.FormB.B6.$invalid&&invalid}" type="text" required></label>
+			<button type="submit" class="button small radius">Submit</button>
+		</form>
+    </div>
+
+    <div>
+    	<h4>Add Event</h4>
+    	<div class="hrule"></div>
+		<form class="short-form" name="Ctrl.FormC" data-ng-submit="Ctrl.submitEvent()" novalidate >
+			<label>Name<input data-ng-class="{error:Ctrl.FormC.C1.$invalid&&invalid}" name="C1" type="text" ng-model="Ctrl.evt.title" required></label>
+			<label>Venue<input data-ng-class="{error:Ctrl.FormC.C2.$invalid&&invalid}" name="C2" type="text" ng-model="Ctrl.evt.venue" required></label>
+			<label>Dates<input data-ng-class="{error:Ctrl.FormC.C3.$invalid&&invalid}" name="C3" type="text" ng-model="Ctrl.evt.dates" required></label>
+			<label>Image<input data-ng-class="{error:Ctrl.FormC.C4.$invalid&&invalid}" name="C4" type="text" ng-model="Ctrl.evt.img" required></label>
+			<label>Status<input data-ng-class="{error:Ctrl.FormC.C5.$invalid&&invalid}" name="C5" type="text" ng-model="Ctrl.evt.status" required></label>
+			<button type="submit" class="button small radius">Submit</button>
+		</form>
+    </div>
+
+    
+</div>

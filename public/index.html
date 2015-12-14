@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>School Arts Fund</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+  <!--Dependencies; AngularJS etc.-->
+	<script src="bundle.js"></script>
+  <script src="vendors/slick-carousel/slick/slick.js"></script>
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,600' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Jaldi:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="vendors/foundation-5.5.2/css/normalize.css">
+	<link rel="stylesheet" href="vendors/foundation-5.5.2/css/foundation.css">
+  <link rel="stylesheet" href="vendors/slick-carousel/slick/slick.css">
+  <link rel="stylesheet" href="resources/css/styles.css">
+</head>
+
+<body>
+  <script>
+    var w = $(document).width();
+    if (w <= 699) {
+      document.location = "mobile.html";
+    }
+  </script>
+
+	<div class="outer-container" data-ng-app="MyApp">
+  <div class="header-wrapper">
+    <div class="header" role="banner">
+
+      <div class="header-logo">
+        <a ui-sref="home"><img ng-src="resources/img/web-header-logo.png" alt=""></a>
+      </div>
+      <div class="header-menu">
+        <div class="header-menu-top">
+          <a ui-sref="home" class="header-text-link">Home</a>
+          <a ui-sref="connect" class="header-text-link">Connect</a>
+          <a ui-sref="handprints" class="button">Handprints</a>
+          <a ui-sref="auction" class="button">Auction!</a>
+          <a ui-sref="donate" class="button">Donate Now</a>
+        </div>
+        <div class="header-menu-bottom">
+         <a ui-sref="what" class="button">What We Do</a>
+         <a ui-sref="why" class="button">Why We Do It</a>
+         <a ui-sref="get" class="button">Get Involved</a>
+         
+        </div>
+      </div>
+    </div>
+ </div>
+
+  <div class="inner-container">
+    <div ui-view class="view"></div>
+  </div>
+    
+    <div class="footer" role="footer">
+      <div class="row">
+          <div class="small-12 columns">
+            <p class="slogan">Artist's Sustaining Art</p>
+            <p class="links">
+                <a ui-sref="home">Home</a>
+            </p>
+            <p class="copywrite">Copywrite © 2015</p>
+          </div>
+        </div>
+    </div>
+</div>
+
+  <!--Vendors not included in bundle.js file-->
+  <script src="vendors/foundation-5.5.2/js/foundation.min.js"></script>
+  <script src="vendors/foundation-5.5.2/js/foundation/foundation.offcanvas.js"></script>
+
+   <!--Custom JS-->
+  <script src="myApp.js"></script>
+
+  <!--View Controlles-->
+  <script src="views/home/home.ctrl.js"></script>
+  <script src="views/about/about.ctrl.js"></script>
+  <script src="views/gallery/artists/artist.ctrl.js"></script>
+  <script src="views/gallery/artworks/artworks.ctrl.js"></script>
+  <script src="views/gallery/gallery.ctrl.js"></script>
+  <script src="views/events/events.ctrl.js"></script>
+  <script src="views/nav.ctrl.js"></script>
+  <script src="views/gallery/mmModalInstance.ctrl.js"></script>
+  <script src="views/contact/contact.ctrl.js"></script>
+  <script src="views/data/data.ctrl.js"></script>
+  <!--Services-->
+  <script src="js/data.srvc.js"></script>
+  <script src="js/shared.srvc.js"></script>
+ 
+  <!--Directives-->
+  <script src="js/directives/hrule.dir.js"></script>
+  <script src="views/gallery/artists/artistItem.dir.js"></script>
+  <script src="views/gallery/galleryItem.dir.js"></script>
+  <script src="views/events/upcomingItem.dir.js"></script>
+  <script src="views/events/recentItem.dir.js"></script>
+  
+  
+
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
