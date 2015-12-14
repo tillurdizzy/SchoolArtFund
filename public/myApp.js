@@ -96,6 +96,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			url: "/connect",
 			templateUrl:"views/contact/connect.html"
 		})
+
+		.state('members', {
+			url: "/members",
+			templateUrl:"views/members/members.html"
+		})
 		
 		
 });	
