@@ -238,6 +238,12 @@ html, body {
 	background-size: cover;
 }
 
+.flexRow{
+	display: flex;
+	a{
+		padding-right:10px;
+	}
+}
 
 
 .flexCenterRow{

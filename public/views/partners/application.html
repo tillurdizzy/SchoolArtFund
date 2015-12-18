@@ -1,0 +1,96 @@
+<div  ng-controller="ApplicationCtrl">
+    <h3>SAF Partner Membership Application Form</h3>
+    <div class="hrule"></div>
+    
+	<div class="applicationForm">
+    <form name="requestForm" ng-submit="submitMembershipForm()" novalidate>
+    <div class="col-left">
+    <h5>Business</h5>
+        <div class="medium-field">
+            <label>Business Name</label>
+            <input ng-class="{error:requestForm.businessname.$invalid&&submissionInvalid}" name="businessname" type="text" placeholder="DBA" ng-model="_businessname" required>
+        </div>    
+        <div class="medium-field">
+            <label>Street</label>
+            <input ng-class="{error:requestForm.lastname.$invalid&&submissionInvalid}" name="lastname" type="text" placeholder="Last Name" ng-model="_lastname" required>
+        </div>
+        <div class="short-field">
+            <label>City</label>
+            <input ng-class="{error:requestForm.city.$invalid&&submissionInvalid}" name="city" type="text" placeholder="City" ng-model="_city" required>
+        </div>
+        <div class="full-field">
+            <div class="short-field">
+               <label>State</label>
+                <input ng-class="{error:requestForm.state.$invalid&&submissionInvalid}" name="state" type="text" placeholder="State" ng-model="_state" required>
+            </div>
+            <div class="short-field">
+                <label>Zip</label>
+                <input ng-class="{error:requestForm.zip.$invalid&&submissionInvalid}" name="zip" type="text" placeholder="Zip Code" ng-model="_zip" required>
+            </div>
+        </div>
+        
+      </div>       
+           <!--  <div class="clearfix" ng-show="requestForm.firstname.$invalid && submissionInvalid">
+                <p class="attention" ng-show="requestForm.firstname.$error.required">First Name is required.</p>
+            </div>
+            <div ng-show="requestForm.email.$invalid && submissionInvalid">
+                <p class="attention" ng-show="requestForm.email.$error.required">Email is required.</p>
+            </div>
+            <div ng-show="requestForm.state.$invalid && submissionInvalid">
+                <p class="attention" ng-show="requestForm.state.$error.required">State is required.</p>
+            </div>
+            <div ng-show="requestForm.lastname.$invalid && submissionInvalid">
+                <p class="attention" ng-show="requestForm.lastname.$error.required">Last Name is required.</p>
+            </div>
+             <div ng-show="requestForm.phone.$invalid && submissionInvalid">
+                <p class="attention" ng-show="requestForm.phone.$error.required">Phone Number is required.</p>
+            </div>
+             <div ng-show="requestForm.zip.$invalid && submissionInvalid">
+                <p class="attention" ng-show="requestForm.zip.$error.required">Zip Code is required.</p>
+            </div>
+
+            <button type="submit" class="button small radius">Submit</button> -->
+    <div class="col-right">
+        <h5>Personal</h5>
+        <div class="full-field">
+            <div class="half-field">
+                <label>First Name</label>
+                <input ng-class="{error:requestForm.firstname.$invalid&&submissionInvalid}" name="firstname" type="text" placeholder="First Name" ng-model="_firstname" required>
+            </div>
+            <div class="half-field">
+                <label>Last Name</label>
+                <input ng-class="{error:requestForm.lastname.$invalid&&submissionInvalid}" name="lastname" type="text" placeholder="Last Name" ng-model="_lastname" required>
+            </div>
+        </div>
+        <div class="medium-field">
+            <label>Street</label>
+            <input ng-class="{error:requestForm.street_personal.$invalid&&submissionInvalid}" name="street_personal" type="text" placeholder="Street" ng-model="_street_personal" required>
+        </div>
+        <div class="short-field">
+            <label>City</label>
+            <input ng-class="{error:requestForm.city_personal.$invalid&&submissionInvalid}" name="city_personal" type="text" placeholder="City" ng-model="_city_personal" required>
+        </div>
+         <div class="full-field">
+        <div class="short-field">
+           <label>State</label>
+            <input ng-class="{error:requestForm.state_personal.$invalid&&submissionInvalid}" name="state_personal" type="text" placeholder="State" ng-model="_state_personal" required>
+        </div>
+        <div class="short-field">
+            <label>Zip</label>
+            <input ng-class="{error:requestForm.zip_personal.$invalid&&submissionInvalid}" name="zip_personal" type="text" placeholder="Zip Code" ng-model="_zip_personal" required>
+        </div>
+        </div>
+        <div class="medium-field">   
+            <label>Email</label>
+            <input  ng-class="{error:requestForm.email.$invalid&&submissionInvalid}" name="email" type="text" placeholder="Email" ng-model="_email" required>
+         </div>   
+
+        <div class="short-field">    
+            <label>Phone Number</label>
+            <input ng-class="{error:requestForm.phone.$invalid&&submissionInvalid}" name="phoneNum" type="text" placeholder="Phone Number" ng-model="_phone" required>
+            </div>
+        </div>   
+    </div>
+    </form>
+   </div>
+</div>

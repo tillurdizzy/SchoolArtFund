@@ -67,10 +67,10 @@ gulp.task('styles', function(){
 		csswring,autoprefixer,lost
 	];
 	return gulp.src(['scss/styles.scss'])
-	.pipe(sourcemaps.init())
+	//.pipe(sourcemaps.init())
 	.pipe(sass())
 	.pipe(postcss(processors))
-	.pipe(sourcemaps.write('public/resources/css'))
+	//.pipe(sourcemaps.write('public/resources/css'))
 	.pipe(gulp.dest('public/resources/css'));
 });
 
